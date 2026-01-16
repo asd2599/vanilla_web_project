@@ -139,3 +139,144 @@
   font-size: var(--fs-small-text);
   text-align: center;
 }
+
+/* slider css */
+.slider-section .container {
+  position: relative;
+}
+
+.slider-section .swiper-slide {
+  display: flex;
+  width: var(--ls-full);
+}
+
+.slider-section .swiper-slide > div {
+  width: var(--ls-1-2);
+  padding: 0 var(--el-medium);
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.slider-section .swiper-slide > div > img {
+  width: var(--ls-full);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.slider-section .slider-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: var(--el-medium);
+}
+
+.slider-section .swiper-slide.swiper-slide-active .slider-text {
+  animation: show-up 0.5s 1 forwards;
+  transform: translateY(40px);
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+@keyframes show-up {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.slider-section .slider-text h4 {
+  font-size: 1.8rem;
+  font-weight: var(--fw-400);
+}
+.slider-section .slider-text p {
+  font-size: var(--fs-small-text);
+  width: 90%;
+}
+
+.slider-section .slider-nav {
+  background: white;
+  color: black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px darkslategrey;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  svg {
+    height: 60%;
+    width: 60%;
+  }
+}
+
+.swiper-button-next {
+  right: 1.5rem !important;
+}
+
+.swiper-button-prev {
+  left: 1.5rem !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -2.5rem;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+}
+
+.swiper-pagination-bullet-active {
+  background: black;
+}
+
+.offers-section .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.offers-section .product-frame {
+  width: var(--ls-1-3);
+  padding: var(--el-medium);
+}
+
+.offers-section .product-frame img {
+  width: var(--ls-full);
+  border-radius: 0.25rem;
+}
+
+.offers-section .product-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--el-normal);
+  margin-top: var(--el-normal);
+}
+
+.offers-section .product-text h4 {
+  font-size: var(--fs-name);
+  font-weight: var(--fw-400);
+}
+
+.offers-section .product-text strong {
+  font-size: var(--fs-18);
+}
+
+.offers-section .product-text p {
+  padding: var(--el-medium);
+  font-size: var(--fs-small-text);
+}
